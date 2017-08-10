@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Cat Dog Generator</title>
+    <title>Triangle Tracker</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
@@ -9,35 +9,23 @@
   </head>
   <body>
     <div class="container">
-      <h1>Cat or Dog Decision Generator</h1>
+      <h1>Triangle Tracker</h1>
 
-      <p>Are you a dog or a cat person, fill in to find out:</p>
+      <p>What kind of triangle are you working with?:</p>
 
-      <form id="pet">
-        <label for="age">Age</label>
-        <input id="age" type="text">
-        <label for="gender">Gender</label>
-        <select id="gender">
-          <option value="female">Female</option>
-          <option value="male">Male</option>
-        </select>
-          <label for="activities">Activity</label>
-         <select id="activities">
-          <option value="read">Read</option>
-          <option value="run">Run</option>
-        </select>
-          <label for="living">Housing</label>
-         <select id="living">
-          <option value="apartment">Apartment</option>
-          <option value="house">House</option>
-        </select>
-
-        <button type="submit" class="btn">Find out what pet is for you!</button>
+      <form id="triangle">
+        <label for="side1">side 1</label>
+        <input id="side1" type="text">
+        <label for="side2">side 2</label>
+        <input id="side2" type="text">
+        <label for="side3">side 3</label>
+        <input id="side3" type="text">
+        <button type="submit" class="btn">find out what kind of triangle</button>
       </form>
 
       <div id="quote">
-        <p>Looks like you are a <span id="thepet"></span> type of person.</p>
+        <p>Looks like you made a <span id="thetri"></span> type of triangle</p>
       </div>
     </div>
   </body>
-</html>
+  </html>

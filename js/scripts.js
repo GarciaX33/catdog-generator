@@ -1,35 +1,35 @@
 $(document).ready(function() {
-  $("form#pet").submit(function(event) {
-    var age = parseInt($("#age").val());
-    var gender = $("select#gender").val();
-    var activity = $("select#activities").val();
-    var housing = $("select#living").val();
-    var cat = "cat";
-    var dog = "dog";
+  $("form#triangle").submit(function(event) {
+  	//alert('this is not a test');
+    var side1 = parseInt($("#side1").val());
+    var side2 = parseInt($("#side2").val());
+    var side3 = parseInt($("#side3").val());
+    var equilateral = "equilateral";
+    var isosceles = "isosceles";
+    var scalene = "scalene";
+    var nottriangle = "not a triangle";
 
-    if (activity) {
-      //var cat = "cat";
-      //var dog = "dog";
-      if (activity === 'read' && housing === "apartment" ) {
-      //cat;
-      	$("#thepet").empty().prepend(cat);
-      	$("#quote").show();
+    if (equilateral) {
+      if (side1 === side2 && side1 === side3 && side2 === side3) {
+      $("#thetri").empty().prepend(equilateral);
+      $("#quote").show();
+     	}
+     }
+
+     if (isosceles) {
+       if (side1 === side2 || side1 === side3 || side2 === side3) {
+       $("#thetri").empty().prepend(isosceles);
+       $("#quote").show();
+      	}
       }
 
-      if (activity === 'run' && housing === "house") {
-      //dog;
-      	$("#thepet").empty().prepend(dog);
-      	$("#quote").show();
-      }
-      //else {
-      	//alert('Please fully fill out form.');
+      if (scalene) {
+        if (side1 !== side2 && side1 !== side3 && side2 !== side3) {
+        $("#thetri").empty().prepend(scalene);
+        $("#quote").show();
+       	}
+       }
 
-      }
-
-    if (isNaN(age)) {
-        $("#quote").hide();
-  			alert('Please fully fill out form.');
-  	}
 
 
     event.preventDefault();
