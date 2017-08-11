@@ -9,27 +9,19 @@ $(document).ready(function() {
     var scalene = "scalene";
     var nottriangle = "not a triangle";
 
-    if (equilateral) {
-      if (side1 === side2 && side1 === side3 && side2 === side3) {
+    if (side1 === side2 && side2 === side3) {
       $("#thetri").empty().prepend(equilateral);
       $("#quote").show();
-     	}
-     }
-
-     if (isosceles) {
-       if (side1 === side2 || side1 === side3 || side2 === side3) {
-       $("#thetri").empty().prepend(isosceles);
-       $("#quote").show();
-      	}
-      }
-
-      if (scalene) {
-        if (side1 !== side2 && side1 !== side3 && side2 !== side3) {
-        $("#thetri").empty().prepend(scalene);
-        $("#quote").show();
-       	}
-       }
-
+    }  else if(side1 === side2 || side1 === side3 || side2 === side3) {
+      $("#thetri").empty().prepend(isosceles);
+      $("#quote").show();
+    }  else if(side1 !== side2 && side1 !== side3 && side2 !== side3) {
+      $("#thetri").empty().prepend(scalene);
+      $("#quote").show();
+    } else {
+      $("#thetri").empty().prepend(nottriangle);
+      $("#quote").show();
+    }
 
 
     event.preventDefault();
